@@ -1,9 +1,11 @@
 completeGetData <- function(directory, id) {
   ## if the id is single or double digit, we have to build it to 3 digits for the
   ## file name.
+  workingDir <- "/Volumes/data/code/datasciencecoursera/RProgramming/prog1/"
+  
   createFileName <- paste(formatC(id, width = 3, flag = "0"), ".csv", sep = "")
 
-  createFilePath <- paste(directory, "/", createFileName, sep = "")
+  createFilePath <- paste(workingDir, directory, "/", createFileName, sep = "")
 
   inputData <- read.csv(createFilePath)
 
